@@ -39,28 +39,22 @@ Resumo rápido de onde cada requisito pedido no trabalho foi implementado:
 
 ## Screenshots
 
-<!--
-  Para gerar os prints: rode `flutter run -d chrome`, abra cada tela e
-  salve o print em docs/screenshots/ com o nome indicado na legenda.
-  Formato recomendado: recorte só a janela do app (proporção de celular).
--->
-
 <table>
   <tr>
     <td align="center" width="25%">
-      <img src="docs/screenshots/home.png" width="200" alt="Lista de ordens de serviço"/><br/>
+      <img src="https://github.com/user-attachments/assets/305937b6-a960-408e-b7b2-e6abbb757a99" width="200" alt="Lista de ordens de serviço"/><br/>
       <sub><b>Lista de OS</b></sub>
     </td>
     <td align="center" width="25%">
-      <img src="docs/screenshots/nova_os.png" width="200" alt="Formulário de nova ordem de serviço"/><br/>
+      <img src="https://github.com/user-attachments/assets/71f47eb2-9791-40db-ab9d-f007c261cf4a" width="200" alt="Formulário de nova ordem de serviço"/><br/>
       <sub><b>Nova OS</b></sub>
     </td>
     <td align="center" width="25%">
-      <img src="docs/screenshots/detalhe_os.png" width="200" alt="Detalhe da ordem de serviço"/><br/>
+      <img src="https://github.com/user-attachments/assets/900696f8-2ae7-42c0-9e42-6bead7737f82" width="200" alt="Detalhe da ordem de serviço"/><br/>
       <sub><b>Detalhe da OS</b></sub>
     </td>
     <td align="center" width="25%">
-      <img src="docs/screenshots/ab_dashboard.png" width="200" alt="Painel do teste A/B"/><br/>
+      <img src="https://github.com/user-attachments/assets/62b7332b-4b93-4d13-bd76-769e6b3c08bb" width="200" alt="Painel do teste A/B"/><br/>
       <sub><b>Painel A/B</b></sub>
     </td>
   </tr>
@@ -205,7 +199,6 @@ oficina_app/
     order_repository_test.dart
     ab_test_service_test.dart
     widgets/home_screen_test.dart
-  docs/screenshots/
   .github/workflows/ci.yml
 ```
 
@@ -218,14 +211,4 @@ oficina_app/
   cenário real de produção, o ideal seria enviar os eventos de conversão para
   um serviço de analytics (Firebase Analytics, Amplitude, etc.) para agregar
   os resultados de todos os usuários.
-
-
-
-  ## Screenshots
-<img width="406" height="733" alt="image" src="https://github.com/user-attachments/assets/305937b6-a960-408e-b7b2-e6abbb757a99" />
-<img width="405" height="730" alt="Screenshot 2026-09-11 at 23 17 48" src="https://github.com/user-attachments/assets/71f47eb2-9791-40db-ab9d-f007c261cf4a" />
-<img width="406" height="731" alt="Screenshot 2026-09-11 at 23 18 16" src="https://github.com/user-attachments/assets/900696f8-2ae7-42c0-9e42-6bead7737f82" />
-<img width="405" height="736" alt="Screenshot 2026-09-11 at 23 18 42" src="https://github.com/user-attachments/assets/62b7332b-4b93-4d13-bd76-769e6b3c08bb" />
-
-
 
