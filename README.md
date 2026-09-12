@@ -168,3 +168,14 @@ oficina_app/
   cenário real de produção, o ideal seria enviar os eventos de conversão para
   um serviço de analytics (Firebase Analytics, Amplitude, etc.) para agregar
   os resultados de todos os usuários.
+
+
+
+  ## Screenshots
+<img width="406" height="733" alt="image" src="https://github.com/user-attachments/assets/305937b6-a960-408e-b7b2-e6abbb757a99" />
+<img width="405" height="730" alt="Screenshot 2026-09-11 at 23 17 48" src="https://github.com/user-attachments/assets/71f47eb2-9791-40db-ab9d-f007c261cf4a" />
+<img width="406" height="731" alt="Screenshot 2026-09-11 at 23 18 16" src="https://github.com/user-attachments/assets/900696f8-2ae7-42c0-9e42-6bead7737f82" />
+<img width="405" height="736" alt="Screenshot 2026-09-11 at 23 18 42" src="https://github.com/user-attachments/assets/62b7332b-4b93-4d13-bd76-769e6b3c08bb" />
+
+
+
