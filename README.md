@@ -1,12 +1,20 @@
-# Oficina Rápida
+# 🔧 Oficina Rápida
 
-Aplicativo mobile (Flutter) para gestão de ordens de serviço de uma **oficina
-mecânica**, desenvolvido como trabalho do 1º bimestre. O projeto foi
-construído seguindo **TDD**, inclui um **teste A/B** real embutido no app e
-possui um pipeline de **CI/CD** completo via GitHub Actions.
+**App mobile em Flutter para gestão de ordens de serviço de uma oficina mecânica**, desenvolvido como trabalho do 1º bimestre.
+
+![CI/CD](https://github.com/nathanbizinoto/LDDM2026/actions/workflows/ci.yml/badge.svg)
+![Flutter](https://img.shields.io/badge/Flutter-3.x-02569B?logo=flutter&logoColor=white)
+![Tests](https://img.shields.io/badge/testes-28%20passing-brightgreen)
+
+> **Aluno:** Nathan Bizinoto
+> **Tema:** Oficina mecânica (gestão de ordens de serviço)
+> **Tecnologia:** Flutter (Dart)
+> **Repositório:** [nathanbizinoto/LDDM2026](https://github.com/nathanbizinoto/LDDM2026)
 
 ## Sumário
 
+- [Checklist do trabalho](#checklist-do-trabalho)
+- [Screenshots](#screenshots)
 - [Tema e viabilidade](#tema-e-viabilidade)
 - [Funcionalidades](#funcionalidades)
 - [Arquitetura](#arquitetura)
@@ -16,6 +24,47 @@ possui um pipeline de **CI/CD** completo via GitHub Actions.
 - [Como rodar o projeto](#como-rodar-o-projeto)
 - [Estrutura de pastas](#estrutura-de-pastas)
 - [Limitações e próximos passos](#limitações-e-próximos-passos)
+
+## Checklist do trabalho
+
+Resumo rápido de onde cada requisito pedido no trabalho foi implementado:
+
+| Requisito | Como foi atendido | Onde ver |
+|---|---|---|
+| **Testes A/B** | Botão de criar OS com 2 variantes (cor/texto), sorteada e persistida por dispositivo, com painel de conversões | [`lib/services/ab_test_service.dart`](lib/services/ab_test_service.dart), [`lib/screens/ab_dashboard_screen.dart`](lib/screens/ab_dashboard_screen.dart), seção [Teste A/B](#teste-ab) |
+| **CI/CD** | Pipeline no GitHub Actions: analisa, testa, builda APK e faz deploy automático da versão web | [`.github/workflows/ci.yml`](.github/workflows/ci.yml), seção [CI/CD](#cicd) |
+| **TDD** | Regras de negócio escritas como funções puras e testadas antes/junto da implementação (28 testes) | pasta [`test/`](test), seção [TDD](#tdd-desenvolvimento-orientado-por-testes) |
+| **Tema escolhido** | Oficina mecânica: cadastro, acompanhamento e faturamento de ordens de serviço | seção [Tema e viabilidade](#tema-e-viabilidade) |
+| **Framework** | Flutter/Dart, Material 3, gerenciamento de estado com `provider` | seção [Arquitetura](#arquitetura) |
+
+## Screenshots
+
+<!--
+  Para gerar os prints: rode `flutter run -d chrome`, abra cada tela e
+  salve o print em docs/screenshots/ com o nome indicado na legenda.
+  Formato recomendado: recorte só a janela do app (proporção de celular).
+-->
+
+<table>
+  <tr>
+    <td align="center" width="25%">
+      <img src="docs/screenshots/home.png" width="200" alt="Lista de ordens de serviço"/><br/>
+      <sub><b>Lista de OS</b></sub>
+    </td>
+    <td align="center" width="25%">
+      <img src="docs/screenshots/nova_os.png" width="200" alt="Formulário de nova ordem de serviço"/><br/>
+      <sub><b>Nova OS</b></sub>
+    </td>
+    <td align="center" width="25%">
+      <img src="docs/screenshots/detalhe_os.png" width="200" alt="Detalhe da ordem de serviço"/><br/>
+      <sub><b>Detalhe da OS</b></sub>
+    </td>
+    <td align="center" width="25%">
+      <img src="docs/screenshots/ab_dashboard.png" width="200" alt="Painel do teste A/B"/><br/>
+      <sub><b>Painel A/B</b></sub>
+    </td>
+  </tr>
+</table>
 
 ## Tema e viabilidade
 
@@ -102,8 +151,8 @@ Optimizely), sem depender de conta em nuvem para o trabalho.
 
 ## CI/CD
 
-O workflow `.github/workflows/ci.yml` roda no GitHub Actions a cada push ou
-pull request para a branch `main`:
+O workflow [`.github/workflows/ci.yml`](.github/workflows/ci.yml) roda no
+GitHub Actions a cada push ou pull request para a branch `main`:
 
 1. **`test`** — instala dependências, roda `flutter analyze`, checa
    formatação (`dart format`) e executa `flutter test` (o mesmo conjunto de
@@ -115,10 +164,10 @@ pull request para a branch `main`:
    demonstrando **implantação contínua** de fato (o app fica acessível por
    uma URL pública a cada novo push).
 
-Para ativar o pipeline, basta dar push deste projeto para um repositório no
-GitHub — o workflow já está configurado e não exige nenhum segredo além do
-`GITHUB_TOKEN` padrão. Se o nome do repositório remoto não for `oficina_app`,
-ajuste o `--base-href` do job `deploy-web` para `/nome-do-repositorio/`.
+Acompanhe as execuções na aba
+[**Actions**](https://github.com/nathanbizinoto/LDDM2026/actions) do
+repositório — é o melhor lugar para mostrar o CI/CD funcionando na
+apresentação.
 
 ## Como rodar o projeto
 
@@ -156,6 +205,7 @@ oficina_app/
     order_repository_test.dart
     ab_test_service_test.dart
     widgets/home_screen_test.dart
+  docs/screenshots/
   .github/workflows/ci.yml
 ```
 
