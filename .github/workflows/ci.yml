@@ -75,10 +75,8 @@ jobs:
       - name: Instalar dependências
         run: flutter pub get
 
-      # Ajuste --base-href para "/nome-do-repositorio/" caso o nome do
-      # repositório no GitHub seja diferente de "oficina_app".
       - name: Gerar build web
-        run: flutter build web --base-href /oficina_app/
+        run: flutter build web --base-href /${{ github.event.repository.name }}/
 
       - name: Publicar no GitHub Pages
         uses: peaceiris/actions-gh-pages@v4

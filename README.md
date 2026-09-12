@@ -23,7 +23,6 @@
 - [CI/CD](#cicd)
 - [Como rodar o projeto](#como-rodar-o-projeto)
 - [Estrutura de pastas](#estrutura-de-pastas)
-- [Limitações e próximos passos](#limitações-e-próximos-passos)
 
 ## Checklist do trabalho
 
@@ -158,6 +157,8 @@ GitHub Actions a cada push ou pull request para a branch `main`:
    demonstrando **implantação contínua** de fato (o app fica acessível por
    uma URL pública a cada novo push).
 
+🔗 **App publicado:** https://nathanbizinoto.github.io/LDDM2026/
+
 Acompanhe as execuções na aba
 [**Actions**](https://github.com/nathanbizinoto/LDDM2026/actions) do
 repositório — é o melhor lugar para mostrar o CI/CD funcionando na
@@ -201,14 +202,4 @@ oficina_app/
     widgets/home_screen_test.dart
   .github/workflows/ci.yml
 ```
-
-## Limitações e próximos passos
-
-- Os dados das ordens de serviço ficam em memória (não persistem ao fechar o
-  app). Evolução natural: salvar em SQLite local (`sqflite`) ou em um backend
-  (ex.: Firebase/Supabase).
-- O teste A/B é local ao dispositivo (não agrega dados entre usuários). Em um
-  cenário real de produção, o ideal seria enviar os eventos de conversão para
-  um serviço de analytics (Firebase Analytics, Amplitude, etc.) para agregar
-  os resultados de todos os usuários.
 
