@@ -6,7 +6,6 @@ void main() {
   late OrderRepository repository;
 
   setUp(() {
-    // Repositório vazio (sem os dados de exemplo) para isolar cada teste.
     repository = OrderRepository(seed: []);
   });
 

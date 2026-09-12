@@ -1,4 +1,3 @@
-/// Situação de uma ordem de serviço dentro do fluxo da oficina.
 enum OrderStatus { aberta, emAndamento, concluida }
 
 extension OrderStatusLabel on OrderStatus {
@@ -13,7 +12,6 @@ extension OrderStatusLabel on OrderStatus {
     }
   }
 
-  /// Próxima situação do fluxo. Retorna null quando já está concluída.
   OrderStatus? get next {
     switch (this) {
       case OrderStatus.aberta:
@@ -26,7 +24,6 @@ extension OrderStatusLabel on OrderStatus {
   }
 }
 
-/// Ordem de serviço de um veículo na oficina.
 class ServiceOrder {
   final String id;
   final String cliente;

@@ -1,7 +1,3 @@
-/// Regras de validação do formulário de nova ordem de serviço.
-///
-/// Extraídas como funções puras (sem dependência de widgets) para permitir
-/// testá-las isoladamente seguindo o ciclo TDD (red -> green -> refactor).
 class OrderValidator {
   const OrderValidator._();
 

@@ -2,10 +2,6 @@ import 'package:flutter/foundation.dart';
 
 import '../models/service_order.dart';
 
-/// Repositório em memória das ordens de serviço da oficina.
-///
-/// Mantido simples (sem banco de dados) de propósito: o foco do projeto é
-/// demonstrar TDD, testes A/B e CI/CD sobre um domínio pequeno e verificável.
 class OrderRepository extends ChangeNotifier {
   final List<ServiceOrder> _orders;
 
